@@ -1,0 +1,31 @@
+{
+  "name": "mongo-news-scraper",
+  "version": "0.1.0",
+  "description": "news scraper from travel site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmhammons91/mongo-news-scraper.git"
+  },
+  "keywords": [
+    "mongo"
+  ],
+  "author": "THammons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmhammons91/mongo-news-scraper/issues"
+  },
+  "homepage": "https://github.com/tmhammons91/mongo-news-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.3",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,16 @@
+
+.jumbotron {
+  text-align: center; 
+
+}
+body {
+  background-color: #c2c2d6 ; 
+  margin: 15px; 
+  padding: 10px
+}
+
+.btn-primary {
+    display: inline-block; 
+    margin: 2px 
+}
+
