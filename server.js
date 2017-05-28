@@ -126,7 +126,19 @@ app.get("/notes/:id", function (req, res) {
     });
 });
 
-
+app.get("/delete/:id", function (req, res) {
+  Note.remove({
+    "_id":req.params.id
+  }).exec(function (error, doc) {
+    if (error) {
+      console.log(error); 
+    }
+    else {
+      console.log("note deleted"); 
+      res.redirect("/" )
+    }
+  })
+}); 
 
 app.listen(8080, function () {
   console.log("News App running on port 8080")

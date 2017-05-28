@@ -19,8 +19,12 @@
 {{#each Article}}
 {{#each this.note}}
 <div class = "well">
-  
-{{this.note}}
+  <p>{{this.note}}</p>
+
+  <form method="DELETE" action="/delete/{{this.id}}">
+     <a href="/delete"> <button class="btn btn-danger btn-sm" id="note-delete">Delete Note</button></a>
+        </form>
+
   </div>
 
   {{/each}} {{/each}}
