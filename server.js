@@ -14,6 +14,7 @@ var Article = require("./models/Article.js");
 
 // Initialize Express
 var app = express();
+var PORT = process.env.PORT || 8080;
 
 // Use morgan and body parser with our app
 app.use(logger("dev"));
@@ -145,6 +146,6 @@ app.get("/delete/:id", function (req, res) {
   })
 }); 
 
-app.listen(process.env.PORT || 8080, function () {
+app.listen(PORT, function () {
   console.log("News App running on port 8080")
 }); 
