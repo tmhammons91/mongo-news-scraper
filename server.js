@@ -32,7 +32,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main", layoutsDir: __dirname +
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/mongoscraper");
+var databaseUri = "mongodb://localhost/mongoscraper"; 
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI); 
+} else {
+  mongoose.connect(databaseUri); 
+}
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -140,6 +145,6 @@ app.get("/delete/:id", function (req, res) {
   })
 }); 
 
-app.listen(8080, function () {
+app.listen(process.env.PORT || 8080, function () {
   console.log("News App running on port 8080")
 }); 
