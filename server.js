@@ -35,19 +35,19 @@ app.set("view engine", "handlebars");
 // Database configuration with mongoose
 
 // Database configuration with mongoose
-if(process.env.NODE_ENV==="production"){
+/*if(process.env.NODE_ENV==="production"){
   mongoose.connect(process.env.MONGODB_URI);
 } else  {
   mongoose.connect("mongodb://localhost/mongoscraper");
-}
+}*/
 
-/*
+
 var databaseUri = "mongodb://localhost/mongoscraper"; 
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI); 
 } else {
   mongoose.connect(databaseUri); 
-} */
+} 
 var db = mongoose.connection;
 
 // Show any mongoose errors
